@@ -1,8 +1,3 @@
-# opencv-contrib-python
-# mediapipe
-# PyAutoGUI  ()
-
-
 import cv2
 import mediapipe as mp
 import pyautogui

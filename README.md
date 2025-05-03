@@ -26,43 +26,51 @@ This project allows users to control their computer mouse cursor and perform cli
 4. A blink (if the distance between landmarks is small enough) triggers a mouse click.
 
 ## ▶️ How to Run
+
 ### 1. Install dependencies
 
 ```bash
 pip install opencv-python mediapipe pyautogui
+````
 
+### 2. Run the script
 
-2. Run the script
-bash
-Copy
-Edit
+```bash
 python eye_mouse.py
-Make sure your webcam is connected and enabled.
+```
 
-⚙️ Configuration
-Eye movement threshold for click detection is currently set to 0.013. You can adjust this for sensitivity in:
+> Make sure your webcam is connected and enabled.
 
-python
-Copy
-Edit
-if (left[0].y - left[1].y) < 0.013:
-Screen resolution is automatically detected with:
+## ⚙️ Configuration
 
-python
-Copy
-Edit
-screen_w, screen_h = pyautogui.size()
-🖼️ Screenshot
+* Eye movement threshold for click detection is currently set to `0.013`. You can adjust this for sensitivity in:
 
-(You can add your own screenshot named screenshot.png in the repo root.)
+  ```python
+  if (left[0].y - left[1].y) < 0.013:
+  ```
 
-📌 Limitations & Future Work
-1. Works best in well-lit environments
-2. May struggle with glasses or dark lighting
-3. Can be extended to:
-4. Support both eyes for better accuracy
-5. Add calibration and gesture control
-6. Introduce on-screen dwell buttons for click alternatives
+* Screen resolution is automatically detected with:
 
-📜 License
+  ```python
+  screen_w, screen_h = pyautogui.size()
+  ```
+
+## 🖼️ Screenshot
+
+![Eye Controlled Mouse Screenshot](screenshot.png)
+
+> *(You can add your own screenshot named `screenshot.png` in the repo root.)*
+
+## 📌 Limitations & Future Work
+
+* Works best in well-lit environments
+* May struggle with glasses or dark lighting
+* Can be extended to:
+
+  * Support both eyes for better accuracy
+  * Add calibration and gesture control
+  * Introduce on-screen dwell buttons for click alternatives
+
+## 📜 License
+
 This project is open source and available for educational and research purposes.
